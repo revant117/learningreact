@@ -8,7 +8,7 @@ module.exports = {
 	],
 	output:{
 		path: require('path').resolve("./public"),
-		filename: 'jsbundle.js',              
+		filename: 'jsbundle.js',          
 		publicPath: '/'
 	},
 	plugins: [
@@ -19,9 +19,9 @@ module.exports = {
 	module:{
 		loaders: [
 			{
-				test: /\.js$/,
-				loader: 'babel-loader',
-				exclude: /node_modules/,
+				test: /\.jsx?$/,
+    			loader: 'babel-loader',
+   			    exclude: /node_modules/,
 				query: {
 					presets: ['react' ,'es2015' , 'react-hmre']
 				}
